@@ -1,0 +1,44 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  background-image: url(./noise.png);
+  background-color: #E5E5E5;
+
+  color: #383838;
+  font-family: 'Inter', sans-serif, Arial;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 4em;
+
+  max-width: 700px;
+  padding: 4em;
+
+  background-color: #FDFDFD;
+  box-shadow: -1px 1px 15px -11px rgba(0,0,0,0.5);
+}
+
+header { grid-column: 1 / 2; }
+content { grid-column: 2 / 3; }
+
+@media (max-width: 600px) {
+  body { display: block; }
+}
+
+h1 {
+  color: #F4C20F;
+  font-family: 'Rubik', sans-serif, Arial;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-size: 1.3em;
+}
+
+a {
+  color: rgba(0,0,0,0.5);
+}
