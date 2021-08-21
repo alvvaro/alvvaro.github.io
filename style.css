@@ -3,13 +3,11 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('../content/font/inter-v3-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../content/font/inter-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../content/font/inter-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../content/font/inter-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../content/font/inter-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../content/font/inter-v3-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+       url('./content/font/inter-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./content/font/inter-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./content/font/inter-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+
 }
 
 /* inter-700 - latin */
@@ -17,13 +15,11 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  src: url('../content/font/inter-v3-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../content/font/inter-v3-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../content/font/inter-v3-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../content/font/inter-v3-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../content/font/inter-v3-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../content/font/inter-v3-latin-700.svg#Inter') format('svg'); /* Legacy iOS */
+       url('./content/font/inter-v3-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./content/font/inter-v3-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./content/font/inter-v3-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+
 }
 
 /* rubik-regular - latin */
@@ -31,13 +27,11 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  src: url('../content/font/rubik-v12-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../content/font/rubik-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../content/font/rubik-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../content/font/rubik-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../content/font/rubik-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../content/font/rubik-v12-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
+       url('./content/font/rubik-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./content/font/rubik-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./content/font/rubik-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+
 }
 
 /* rubik-700 - latin */
@@ -45,60 +39,124 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
-  src: url('../content/font/rubik-v12-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../content/font/rubik-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../content/font/rubik-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../content/font/rubik-v12-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../content/font/rubik-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../content/font/rubik-v12-latin-700.svg#Rubik') format('svg'); /* Legacy iOS */
+       url('./content/font/rubik-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./content/font/rubik-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./content/font/rubik-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+:root {
+    --black: #383838;
+    --dark-grey: rgba(0,0,0,0.5);
+    --grey: rgba(0,0,0,0.3);
+    --background-color: white;
+    --base-font-size: 0.9em;
 }
 
 html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
 
-  height: 100%;
+    /*background-image: url(./content/img/noise.png);
+    background-color: #E5E5E5;*/
+    background-color: var(--background-color);
 
-  background-image: url(../content/img/noise.png);
-  background-color: #E5E5E5;
-
-  color: #383838;
-  font-family: 'Inter', sans-serif, Arial;
+    color: var(--black);
+    font-family: 'Inter', sans-serif, Arial;
+    font-size: var(--base-font-size);
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 4em;
-
-  max-width: 700px;
-  padding: 4em;
-
-  background-color: #FDFDFD;
-  box-shadow: -1px 1px 15px -11px rgba(0,0,0,0.5);
+    max-width: 540px;
+    margin: 5em 0;
 }
 
-header { grid-column: 1 / 2; }
-content { grid-column: 2 / 3; }
+p {
+    color: var(--dark-grey);
+}
 
 h1 {
-  color: #F4C20F;
-  font-family: 'Rubik', sans-serif, Arial;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  font-size: 1.3em;
+    color: #F4C20F;
+    font-family: 'Rubik', sans-serif, Arial;
+    letter-spacing: 0.025em;
+    font-size: 1.5em;
+}
+
+h2 {
+    margin-top: 3em;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.profile {
+    display: flex;
+    column-gap: 2em;
+    align-items: center;
+}
+
+.profile .picture {
+    position: relative;
+}
+
+.profile .picture .status {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 2em;
+    
+    padding: 2px;
+    
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px rgb(0 0 0/.05),0 1px 4px rgb(0 0 0/.1);
+    
+    text-align: center;
+}
+
+.profile .picture img {
+    width: 92px;
+    border-radius: 100%;
+}
+
+.profile .name h1 {
+    margin: 0;
+} .profile .name p {
+    color: var(--dark-grey);
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0;
+}
+
+tr {
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+}
+
+
+th {
+    width: 20%;
+    color: var(--grey);
+    font-weight: normal;
+    text-align: left;
 }
 
 a {
-  color: rgba(0,0,0,0.5);
-}
+    color: var(--black);
+    text-decoration: none;
+} a:hover {
+    text-decoration: underline;
+} 
 
-span.links a {
-  margin-right: 2em;
-}
-
-@media (max-width: 600px) {
-  body { display: block; }
+td::after {
+    content: "↗";
+    margin: 0 3px;
+    font-size: 0.9em;
 }
