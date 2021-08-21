@@ -13,12 +13,11 @@
 
   <header class="profile">
     <div class="picture">
-      <img src="./content/img/avatar.jpeg"/>
+      <img />
       <div class="status">👋</div>
     </div>
     <div class="name">
       <h1>álvaro gs</h1>
-      <p class="description">el sol y todas las ciudades en el camino</p>
     <div>
   </header>
   
@@ -34,7 +33,7 @@
             <td><a href="mailto:hey@alvaro.gs">hey@alvaro.gs</a></td>
         </tr>
         <tr>
-            <th>GitHub</th>
+            <th>Github</th>
             <td><a href="https://github.com/alvvaro/">alvvaro</a></td>
         </tr>
         <tr>
