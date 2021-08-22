@@ -67,6 +67,20 @@
   }
 }*/
 
+@media all and (max-width: 768px) {
+
+  html {
+    margin: 0 1em;
+  }
+
+  table tr {
+    display: grid;
+    width: 100%;
+  } table th {
+    margin-bottom: 0.5em;
+  }
+}
+
 html {
   display: flex;
   justify-content: center;
@@ -211,7 +225,8 @@ td.link::after {
 }
 
 .card img {
-  width: 52px;
+  min-width: 52px;
+  max-width: 52px;
   height: 66px;
   
   border-radius: 5px;
