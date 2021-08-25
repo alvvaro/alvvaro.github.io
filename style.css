@@ -239,6 +239,7 @@ td.link::after {
   box-shadow: var(--box-shadow);
 
   object-fit: cover;
+  object-position: 0 0;
 }
 
 .card img.scroller {
