@@ -204,6 +204,10 @@ td.link::after {
   font-size: 0.9em;
 }
 
+td.phone::after {
+  content: "656 383 565";
+}
+
 /* CARD ITEM STYLE */
 
 .card-parent:hover {
