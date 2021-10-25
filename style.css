@@ -89,6 +89,7 @@ html {
 }
 
 body {
+  width: 100%;
   max-width: 540px;
   margin: 5em 0;
 }
@@ -112,9 +113,8 @@ p {
 }
 
 h1 {
-  color: var(--yellow);
-  font-family: 'Rubik', sans-serif, Arial;
   font-size: 1.5em;
+  font-weight: normal;
 }
 
 h2 {
@@ -137,6 +137,12 @@ a {
   display: flex;
   column-gap: 2em;
   align-items: center;
+}
+
+.profile h1 {
+  color: var(--yellow);
+  font-family: 'Rubik', sans-serif, Arial;
+  font-weight: bold;
 }
 
 .profile .picture {
@@ -172,6 +178,26 @@ a {
   margin-top: 0.5em;
 }
 
+.article a {
+  color: inherit;
+}
+
+.article .name::after {
+  content: "↑";
+  margin: 0 3px;
+  font-size: 0.9em;
+}
+
+.article .picture {
+  position: relative;
+}
+
+.article .picture img {
+  width: 48px;
+  border-radius: 100%;
+}
+
+
 /* TABLE STYLES */
 
 table {
@@ -206,6 +232,10 @@ td.link::after {
 
 td.phone::after {
   content: "656 383 565";
+}
+
+td p.location {
+  margin-top: 0.5em;
 }
 
 /* CARD ITEM STYLE */
@@ -254,7 +284,6 @@ td.phone::after {
   from {
     object-position: 0 0;
   }
-
   to {
     object-position: 0 100%;
   }
@@ -279,6 +308,72 @@ td.phone::after {
   }
 }
 
+.card img.pan {
+  animation: 4.5s ease-in-out infinite alternate pan;
+  object-fit: none;
+}
+
+@keyframes pan{
+  0% {
+    object-position: 30% 10%;
+  }
+  100% {
+    object-position: 40% 85%;
+  }
+}
+
+/* ARTICLE IMAGES */
+
+figure {
+  margin: 0;
+}
+
+.img-array {
+  width: 100vw;
+  margin: 2em 0;
+  margin-left: calc( (103vw - 100%) / -2 );
+  padding: 0.5em 0;
+  
+  display: flex;
+  
+  column-gap: 2em;
+  overflow: auto;
+} .img-array {
+  scrollbar-width: none;
+} .img-array::-webkit-scrollbar{
+  display: none;
+}
+
+.img-array figure:first-child {
+  margin-left: calc( (103vw - 540px) / 2 );
+}
+
+.img-array figure:last-child {
+  margin-right: calc( (103vw - 540px) / 2 );
+}
+
+.img-array img {
+  max-height: 400px;
+  box-shadow: var(--box-shadow);
+} .img-array img.scroller {
+  width: 533px;
+  
+  object-fit: cover;
+  object-position: 0 0;
+  
+  animation: 9s ease-in-out infinite alternate scroller;
+}
+
+.img-array figcaption {
+  margin: 0.5em 0;
+  color: var(--grey);
+  font-size: var(--base-font-size);
+}
+
+
+
+/* PHONE STYLES */
+
 @media all and (max-width: 768px) {
 
   html {
@@ -298,6 +393,25 @@ td.phone::after {
   tr {
     border-top: 0.5em solid transparent;
     border-bottom: 0.5em solid transparent;
+  }
+  
+  .img-array {
+    width: 100vw;
+    margin: 2em -1em;
+    
+    column-gap: 1em;
+  }
+
+  .img-array figure:first-child {
+    margin-left: 1em;
+  }
+
+  .img-array figure:last-child {
+    margin-right: 1em;
+  }
+  
+  .img-array img {
+    max-height: 250px;
   }
 
 }
