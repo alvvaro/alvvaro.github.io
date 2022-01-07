@@ -1,55 +1,20 @@
 /* FONTS */
 
-/* inter-regular - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('./content/font/inter-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./content/font/inter-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./content/font/inter-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: 'Inter', sans-serif;
 }
-
-/* inter-700 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''),
-       url('./content/font/inter-v3-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./content/font/inter-v3-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('./content/font/inter-v3-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-
-}
-
-/* rubik-regular - latin */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('./content/font/rubik-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./content/font/rubik-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./content/font/rubik-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-
-}
-
-/* rubik-700 - latin */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''),
-       url('./content/font/rubik-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./content/font/rubik-v12-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('./content/font/rubik-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
 }
 
 /* VARIABLES */
 
 :root {
+  --max-width: 540px;
+
   --base-font-size: 0.9em;
 
   --black: rgba(0,0,0,0.8);
@@ -84,13 +49,12 @@ html {
   background-color: var(--background-color);
 
   color: var(--black);
-  font-family: 'Inter', sans-serif, Arial;
   font-size: var(--base-font-size);
 }
 
 body {
   width: 100%;
-  max-width: 540px;
+  max-width: var(--max-width);
   margin: 5em 0;
 }
 
@@ -100,12 +64,9 @@ p {
   color: var(--dark-grey);
 }
 
-.italics {
+q {
   font-style: italic;
-}
-
-.grey {
-  color: var(--grey)
+  color: var(--grey);
 }
 
 .highlight {
@@ -133,23 +94,17 @@ a {
 
 /* HEADER STYLES */
 
-.profile {
+header {
   display: flex;
   column-gap: 2em;
   align-items: center;
 }
 
-.profile h1 {
-  color: var(--yellow);
-  font-family: 'Rubik', sans-serif, Arial;
-  font-weight: bold;
-}
-
-.profile .picture {
+header .picture {
   position: relative;
 }
 
-.profile .picture .status {
+header .picture .status {
   width: 2em;
   padding: 2px;
   border-radius: 1em;
@@ -164,39 +119,49 @@ a {
   text-align: center;
 }
 
-.profile .picture img {
+header .picture img {
   width: 92px;
   border-radius: 100%;
 }
 
-.profile .name h1, 
-.profile .name p {
+header .name h1 {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+header .name h1, 
+header .name p {
   margin: 0;
 }
 
-.profile .name .quote {
+header q {
+  display: block;
   margin-top: 0.5em;
 }
 
-.article a {
+header.navigation {
+  display: inherit;
+}
+
+header.navigation h1 {
+  color: inherit;
+  font-weight: inherit;
+}
+
+header.navigation a {
   color: inherit;
 }
 
-.article .name::after {
+header.navigation .name::after {
   content: "↑";
   margin: 0 3px;
   font-size: 0.9em;
 }
 
-.article .picture {
-  position: relative;
-}
-
-.article .picture img {
+header.navigation .picture img {
   width: 48px;
   border-radius: 100%;
 }
-
 
 /* TABLE STYLES */
 
@@ -333,9 +298,9 @@ figure {
   margin: 2em 0;
   margin-left: calc( (103vw - 100%) / -2 );
   padding: 0.5em 0;
-  
+
   display: flex;
-  
+
   column-gap: 2em;
   overflow: auto;
 } .img-array {
@@ -345,22 +310,22 @@ figure {
 }
 
 .img-array figure:first-child {
-  margin-left: calc( (103vw - 540px) / 2 );
+  margin-left: calc( (103vw - var(--max-width)) / 2 );
 }
 
 .img-array figure:last-child {
-  margin-right: calc( (103vw - 540px) / 2 );
+  margin-right: calc( (103vw - var(--max-width)) / 2 );
 }
 
 .img-array img {
   max-height: 400px;
+
   box-shadow: var(--box-shadow);
 } .img-array img.scroller {
   width: 533px;
-  
   object-fit: cover;
   object-position: 0 0;
-  
+
   animation: 9s ease-in-out infinite alternate scroller;
 }
 
@@ -369,8 +334,6 @@ figure {
   color: var(--grey);
   font-size: var(--base-font-size);
 }
-
-
 
 /* PHONE STYLES */
 
@@ -384,21 +347,19 @@ figure {
     width: 100%;
 
     display: grid;
+
+    border-top: 0.5em solid transparent;
+    border-bottom: 0.5em solid transparent;
   }
 
   table th {
     margin-bottom: 0.5em;
   }
 
-  tr {
-    border-top: 0.5em solid transparent;
-    border-bottom: 0.5em solid transparent;
-  }
-  
   .img-array {
     width: 100vw;
     margin: 2em -1em;
-    
+
     column-gap: 1em;
   }
 
@@ -409,7 +370,7 @@ figure {
   .img-array figure:last-child {
     margin-right: 1em;
   }
-  
+
   .img-array img {
     max-height: 250px;
   }
