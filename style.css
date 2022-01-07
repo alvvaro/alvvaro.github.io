@@ -62,6 +62,7 @@ body {
 
 p {
   color: var(--dark-grey);
+  line-height: 1.4;
 }
 
 q {
