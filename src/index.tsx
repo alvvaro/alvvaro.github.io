@@ -1,13 +1,13 @@
-import { StrictMode } from "react";
+import { StrictMode } from 'react';
 
-import "@fontsource-variable/inter";
-import "@fontsource/inter";
+import '@fontsource-variable/inter';
+import '@fontsource/inter';
 
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
+import 'style.css';
 
-// import Router from "@/pages/Router";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     {/* <Router /> */}
     <div>hi from react</div>
