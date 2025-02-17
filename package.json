@@ -1,12 +1,15 @@
 {
   "name": "alvvaro.github.io",
+  "homepage": "https://alvvaro.github.io",
   "private": true,
   "license": "UNLICENSED",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "eslint --max-warnings=0 && tsc -b && vite build"
+    "build": "eslint --max-warnings=0 && tsc -b && vite build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",
@@ -28,6 +31,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2",
