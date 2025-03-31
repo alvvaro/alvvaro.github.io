@@ -15,7 +15,7 @@ export default function Links() {
               >
                 {link.label}
               </th>
-              <td className="after:ml-1 after:text-sm after:content-['↗']">
+              <td className="after:ml-1 after:text-xs after:content-['↗']">
                 <a href={link.href}>{link.value}</a>
               </td>
             </tr>

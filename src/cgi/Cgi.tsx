@@ -22,7 +22,7 @@ export default function Cgi() {
 
         <Carrousel>
           {imageCollection.map((img) => (
-            <img src={img} key={img} className="shadow-md" />
+            <Carrousel.Image src={img} key={img} />
           ))}
         </Carrousel>
       </main>

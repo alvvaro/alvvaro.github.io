@@ -16,11 +16,19 @@ export default function Experience() {
                 {item.date}
               </th>
               <td>
-                <p className="!text-black">
-                  <a href={item.href}> {item.name}</a>
+                <p>
+                  <a href={item.href} className="!text-black">
+                    {item.name}
+                  </a>
+                  {' – '}
+                  <span>{item.location}</span>
                 </p>
-                <p>{item.location}</p>
+
                 <p>{item.text}</p>
+
+                {item.tags ?
+                  <p className="opacity-75">{item.tags.join(' · ')}</p>
+                : null}
               </td>
             </tr>
           ))}
@@ -35,11 +43,15 @@ const experience = [
     date: '2022 - Now',
     name: 'Viafirma',
     location: 'Seville, Spain',
+    tags: ['React', 'TypeScript', 'Redux', 'Vite', 'SWR'],
     text: (
       <>
-        As a <em>Design Systems Engineer</em> and UI Designer, I help developers
-        at the company build consistent products, by providing them with
-        standards for visual design, layout, interaction and voice.
+        Began as a UI Designer, but quickly transtioned to a developer role.
+        Currently holding a <em>Lead React Engineer</em> position that entails
+        architecting, developing, and designing several micro-frontends.
+        Accomplished milestones such as migrating legacy apps from CRA to Vite,
+        implementing <em>TypeScript</em> and harmonizing their design through a
+        common library of components.
       </>
     ),
     href: 'https://www.viafirma.com/',

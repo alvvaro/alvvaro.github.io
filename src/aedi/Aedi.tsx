@@ -14,7 +14,7 @@ export default function Aedi() {
 
         <Carrousel>
           {imageCollection01.map((img) => (
-            <img src={img} key={img} className="shadow-md" />
+            <Carrousel.Image src={img} key={img} />
           ))}
         </Carrousel>
 
@@ -26,7 +26,7 @@ export default function Aedi() {
 
         <Carrousel>
           {imageCollection02.map((img) => (
-            <img src={img} key={img} className="shadow-md" />
+            <Carrousel.Image src={img} key={img} />
           ))}
         </Carrousel>
 
@@ -40,7 +40,7 @@ export default function Aedi() {
 
         <Carrousel>
           {imageCollection03.map((img) => (
-            <img src={img} key={img} className="shadow-md" />
+            <Carrousel.Image src={img} key={img} />
           ))}
         </Carrousel>
       </main>
@@ -49,8 +49,8 @@ export default function Aedi() {
 }
 
 const imageCollection01 = [
-  '/img/aedi/aedi-cp.png',
   '/img/aedi/aedi-tm.png',
+  '/img/aedi/aedi-cp.png',
   '/img/aedi/aedi-bn.png',
   '/img/aedi/aedi-c2.png',
   '/img/aedi/aedi-er.png',

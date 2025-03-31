@@ -14,7 +14,7 @@
 }
 
 @theme {
-  --font-sans: 'Inter Variable';
+  --font-sans: 'Inter Variable', system-ui;
 
   --color-black: light-dark(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
   --color-dark-grey: light-dark(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6));

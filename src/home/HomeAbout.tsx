@@ -7,11 +7,9 @@ export default function About() {
         human-computer interaction, user experience and product engineering.
       </p>
       <p>
-        Currently at <a href="#experience">Viafirma</a>, walking the very fine
-        line between design and implementation by turning my Figma files into
-        React code.
+        Currently <a href="#experience">Lead React Engineer at Viafirma</a>, a
+        cloud-based digital signature and digital identity management suite.
       </p>
-      <p>Design should be ethical, delightful and accessible. </p>
     </div>
   );
 }
