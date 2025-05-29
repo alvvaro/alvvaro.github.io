@@ -7,7 +7,7 @@ export default function About() {
         human-computer interaction, user experience and product engineering.
       </p>
       <p>
-        Currently <a href="#experience">Lead React Engineer at Viafirma</a>, a
+        Currently <a href="#experience">Main React Engineer at Viafirma</a>, a
         cloud-based digital signature and digital identity management suite.
       </p>
     </div>

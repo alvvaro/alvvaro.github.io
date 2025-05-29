@@ -1,3 +1,5 @@
+import CurrentlyPlaying from './CurrentlyPlaying';
+
 export default function Header() {
   return (
     <header className="flex items-center gap-8">
@@ -15,6 +17,9 @@ export default function Header() {
       <div>
         <h1 className="text-yellow text-2xl font-bold">álvaro gs</h1>
         <p className="">Seville — él/he</p>
+        <div className="mt-2">
+          <CurrentlyPlaying />
+        </div>
       </div>
     </header>
   );

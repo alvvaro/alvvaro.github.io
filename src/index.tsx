@@ -11,6 +11,7 @@ import Layout from './Layout';
 import Aedi from './aedi/Aedi';
 import Cgi from './cgi/Cgi';
 import Home from './home/Home';
+import Viafirma from './viafirma/Viafirma';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
@@ -21,6 +22,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </Route>
         <Route path="/cgi">
           <Cgi />
+        </Route>
+        <Route path="/viafirma">
+          <Viafirma />
         </Route>
         <Route>
           <Home />

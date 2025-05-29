@@ -7,7 +7,7 @@ export default function Links() {
           {links.map((link) => (
             <tr
               key={link.label}
-              className="border-transparent not-last-of-type:border-b-16"
+              className="border-transparent not-last-of-type:border-b-12"
             >
               <th
                 scope="row"

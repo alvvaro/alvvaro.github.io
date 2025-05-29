@@ -25,9 +25,15 @@ export default function Aedi() {
         </p>
 
         <Carrousel>
-          {imageCollection02.map((img) => (
-            <Carrousel.Image src={img} key={img} />
-          ))}
+          {imageCollection02.map((img) =>
+            typeof img === 'string' ?
+              <Carrousel.Image src={img} key={img} />
+            : <Carrousel.Image
+                src={img.href}
+                key={img.href}
+                classes={img.classes}
+              />,
+          )}
         </Carrousel>
 
         <p>
@@ -39,9 +45,15 @@ export default function Aedi() {
         </p>
 
         <Carrousel>
-          {imageCollection03.map((img) => (
-            <Carrousel.Image src={img} key={img} />
-          ))}
+          {imageCollection03.map((img) =>
+            typeof img === 'string' ?
+              <Carrousel.Image src={img} key={img} />
+            : <Carrousel.Image
+                src={img.href}
+                key={img.href}
+                classes={img.classes}
+              />,
+          )}
         </Carrousel>
       </main>
     </>
@@ -58,7 +70,7 @@ const imageCollection01 = [
 
 const imageCollection02 = [
   '/img/aedi/aedi-sm.png',
-  '/img/aedi/aedi-wb.png',
+  { href: '/img/aedi/aedi-wb.png', classes: ['animation-scroll'] },
   '/img/aedi/aedi-ma.png',
   '/img/aedi/aedi-br.png',
 ];
@@ -68,5 +80,5 @@ const imageCollection03 = [
   '/img/aedi/6scd-mn.png',
   '/img/aedi/6scd-gl.png',
   '/img/aedi/6scd-wb.png',
-  '/img/aedi/6scd-ps.png',
+  { href: '/img/aedi/6scd-ps.png', classes: ['animation-scroll'] },
 ];

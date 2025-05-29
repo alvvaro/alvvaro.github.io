@@ -1,5 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 
+import classNames from 'classnames';
+
 function Carrousel({ children }: { children: ReactNode }) {
   const [margin, setMargin] = useState(16);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -53,10 +55,8 @@ function Carrousel({ children }: { children: ReactNode }) {
           const div = rowRef.current;
           if (!div) return;
 
-          setCanScrollLeft(div.scrollLeft !== 0);
-          setCanScrollRight(
-            div.scrollLeft !== div.scrollWidth - div.offsetWidth,
-          );
+          setCanScrollLeft(div.scrollLeft > 0);
+          setCanScrollRight(div.scrollLeft < div.scrollWidth - div.offsetWidth);
         });
 
         tickingRef.current = true;
@@ -70,7 +70,7 @@ function Carrousel({ children }: { children: ReactNode }) {
   return (
     <div className="flex flex-col gap-2">
       <div
-        className="scrollbar flex w-dvw flex-row items-start gap-8 overflow-y-auto pt-2 pb-6 *:shrink-0"
+        className="flex w-dvw flex-row gap-8 overflow-y-auto pt-2 pb-6 *:shrink-0"
         style={{
           marginLeft: -margin,
           paddingInline: margin,
@@ -99,15 +99,29 @@ function Carrousel({ children }: { children: ReactNode }) {
   );
 }
 
-Carrousel.Image = function Image({ src }: { src: string }) {
+Carrousel.Image = function Image({
+  src,
+  classes = [],
+}: {
+  src: string;
+  classes?: string[];
+}) {
   return (
-    <div className="block h-96 min-w-96 shadow-md">
-      <img src={src} className="h-full w-full object-cover" />
+    <div
+      className={classNames(
+        'block h-96 min-w-96 shadow-md',
+        classes.includes('square') ? 'w-96' : 'max-w-130',
+      )}
+    >
+      <img
+        src={src}
+        className={classNames(
+          'block h-full w-full object-cover',
+          classes.includes('animation-scroll') ? 'animation-scroll' : '',
+        )}
+      />
     </div>
   );
 };
 
 export default Carrousel;
-
-//
-// h-[420px]

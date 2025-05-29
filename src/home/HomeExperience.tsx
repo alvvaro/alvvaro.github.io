@@ -43,11 +43,11 @@ const experience = [
     date: '2022 - Now',
     name: 'Viafirma',
     location: 'Seville, Spain',
-    tags: ['React', 'TypeScript', 'Redux', 'Vite', 'SWR'],
+    tags: ['React', 'TypeScript', 'Vite', 'Redux', 'SWR', 'MUI'],
     text: (
       <>
         Began as a UI Designer, but quickly transtioned to a developer role.
-        Currently holding a <em>Lead React Engineer</em> position that entails
+        Currently holding a <em>Main React Engineer</em> position that entails
         architecting, developing, and designing several micro-frontends.
         Accomplished milestones such as migrating legacy apps from CRA to Vite,
         implementing <em>TypeScript</em> and harmonizing their design through a
@@ -56,18 +56,18 @@ const experience = [
     ),
     href: 'https://www.viafirma.com/',
   },
-  {
-    date: '2017 - 2020',
-    name: 'AEDI Sevilla (volunteer work)',
-    location: 'Seville, Spain',
-    text: (
-      <>
-        Codirector at AEDI, a non-profit student organization focused on sharing
-        design knowledge. There I was put in charge of the <em>design team</em>;
-        and also organized, among amazing colleagues, three editions of our{' '}
-        <a href="https://scd.aedisevilla.es/">design conference</a>.
-      </>
-    ),
-    href: 'https://www.aedisevilla.es/',
-  },
+  // {
+  //   date: '2017 - 2020',
+  //   name: 'AEDI Sevilla (volunteer work)',
+  //   location: 'Seville, Spain',
+  //   text: (
+  //     <>
+  //       Codirector at AEDI, a non-profit student organization focused on sharing
+  //       design knowledge. There I was put in charge of the <em>design team</em>;
+  //       and also organized, among amazing colleagues, three editions of our{' '}
+  //       <a href="https://scd.aedisevilla.es/">design conference</a>.
+  //     </>
+  //   ),
+  //   href: 'https://www.aedisevilla.es/',
+  // },
 ];
