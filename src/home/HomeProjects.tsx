@@ -63,6 +63,19 @@ const projects = [
   //   ],
   // },
   {
+    date: '2025',
+    name: 'Carta',
+    links: [
+      {
+        title: 'Alternative frontend for RTVE Play',
+        text: "Tired of RTVE Play's slow and clumsy UI, decided to build my own using React.",
+        href: 'https://carta.valtari.workers.dev',
+        img: '/img/index/carta.png',
+        animation: 'scroll',
+      },
+    ],
+  },
+  {
     date: '2020',
     name: 'Proposal for the #FixThatCrapp challenge',
     links: [
