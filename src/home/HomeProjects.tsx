@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { Link } from 'wouter';
 
 export default function Projects() {
@@ -20,9 +22,10 @@ export default function Projects() {
               <td>
                 <p className="!text-black">{item.name}</p>
                 {item.links.map((link) => (
-                  <Link
+                  <LinkWrapper
                     key={link.title}
                     href={link.href}
+                    external={link.href.startsWith('https://')}
                     className="group mt-4 flex flex-row items-start gap-4 hover:!no-underline"
                   >
                     <img
@@ -37,7 +40,7 @@ export default function Projects() {
                       </span>
                       <span className="text-dark-grey">{link.text}</span>
                     </span>
-                  </Link>
+                  </LinkWrapper>
                 ))}
               </td>
             </tr>
@@ -46,6 +49,18 @@ export default function Projects() {
       </table>
     </div>
   );
+}
+
+function LinkWrapper({
+  external,
+  ...props
+}: {
+  href: string;
+  external?: boolean;
+  className?: string;
+  children: ReactNode;
+}) {
+  return external ? <a {...props} target="_blank" /> : <Link {...props} />;
 }
 
 const projects = [
