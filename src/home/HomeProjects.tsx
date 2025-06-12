@@ -64,19 +64,6 @@ function LinkWrapper({
 }
 
 const projects = [
-  // {
-  //   date: '2022 - '.concat(new Date().getFullYear().toString()),
-  //   name: 'Design work for Viafirma',
-  //   links: [
-  //     {
-  //       title: 'Frontend',
-  //       text: '',
-  //       href: './viafirma',
-  //       img: '/img/index/renfe.png',
-  //       animation: undefined,
-  //     },
-  //   ],
-  // },
   {
     date: '2025',
     name: 'Carta',
@@ -90,6 +77,19 @@ const projects = [
       },
     ],
   },
+  // {
+  //   date: '2022 - 2025',
+  //   name: 'Design work for Viafirma',
+  //   links: [
+  //     {
+  //       title: 'Frontend',
+  //       text: '',
+  //       href: './viafirma',
+  //       img: '/img/index/renfe.png',
+  //       animation: undefined,
+  //     },
+  //   ],
+  // },
   {
     date: '2020',
     name: 'Proposal for the #FixThatCrapp challenge',

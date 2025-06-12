@@ -6,20 +6,12 @@ export default function Viafirma() {
     <>
       <HeaderNav h1="Design work for Viafirma" />
       <main className="mt-4 flex flex-col gap-8">
-        <p>
-          My work at <a href="https://www.viafirma.es/">Viafirma</a> entails
-        </p>
+        <p>WIP</p>
 
         <Carrousel>
-          {imageCollection01.map((img) =>
-            typeof img === 'string' ?
-              <Carrousel.Image src={img} key={img} />
-            : <Carrousel.Image
-                src={img.href}
-                key={img.href}
-                classes={img.classes}
-              />,
-          )}
+          {imageCollection01.map((img) => (
+            <Carrousel.Image src={img} key={img} />
+          ))}
         </Carrousel>
       </main>
     </>
@@ -27,6 +19,6 @@ export default function Viafirma() {
 }
 
 const imageCollection01 = [
-  '/img/aedi/aedi-sm.png',
-  { href: '/img/aedi/aedi-wb.png', classes: ['animation-scroll'] },
+  '/img/viafirma/viafirma-hw.gif',
+  '/img/viafirma/viafirma-os.png',
 ];
