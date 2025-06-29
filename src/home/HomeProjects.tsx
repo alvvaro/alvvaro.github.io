@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
-import { Link } from 'wouter';
+import LinkWrapper from '@/LinkWrapper';
 
 export default function Projects() {
   return (
@@ -10,7 +8,7 @@ export default function Projects() {
         <tbody>
           {projects.map((item) => (
             <tr
-              key={item.date}
+              key={item.name}
               className="border-transparent not-last-of-type:border-b-32"
             >
               <th
@@ -51,45 +49,20 @@ export default function Projects() {
   );
 }
 
-function LinkWrapper({
-  external,
-  ...props
-}: {
-  href: string;
-  external?: boolean;
-  className?: string;
-  children: ReactNode;
-}) {
-  return external ? <a {...props} target="_blank" /> : <Link {...props} />;
-}
-
 const projects = [
   {
-    date: '2025',
-    name: 'Carta',
+    date: '2024',
+    name: 'Alternative frontend for RTVE Play',
     links: [
       {
-        title: 'Alternative frontend for RTVE Play',
-        text: "Tired of RTVE Play's slow and clumsy UI, decided to build my own using React.",
+        title: 'Carta',
+        text: 'Clean and lightweight interface for RTVE Play, made with React.',
         href: 'https://carta.valtari.workers.dev',
         img: '/img/index/carta.png',
         animation: 'scroll',
       },
     ],
   },
-  // {
-  //   date: '2022 - 2025',
-  //   name: 'Design work for Viafirma',
-  //   links: [
-  //     {
-  //       title: 'Frontend',
-  //       text: '',
-  //       href: './viafirma',
-  //       img: '/img/index/renfe.png',
-  //       animation: undefined,
-  //     },
-  //   ],
-  // },
   {
     date: '2020',
     name: 'Proposal for the #FixThatCrapp challenge',

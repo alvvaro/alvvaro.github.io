@@ -47,6 +47,10 @@ th {
   @apply text-grey font-normal;
 }
 
+hr {
+  @apply text-grey;
+}
+
 /* ANIMATIONS */
 
 .animation-scroll {

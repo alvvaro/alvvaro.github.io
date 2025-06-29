@@ -15,8 +15,14 @@ export default function Links() {
               >
                 {link.label}
               </th>
-              <td className="after:ml-1 after:text-xs after:content-['↗']">
-                <a href={link.href}>{link.value}</a>
+              <td>
+                {link.href.startsWith('https://') ?
+                  <span className="after:ml-1 after:text-xs after:content-['↗']">
+                    <a href={link.href} target="_blank">
+                      {link.value}
+                    </a>
+                  </span>
+                : <a href={link.href}>{link.value}</a>}
               </td>
             </tr>
           ))}

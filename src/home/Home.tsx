@@ -14,8 +14,8 @@ export default function Home() {
       <main className="mt-12 flex flex-col gap-12">
         <HomeAbout />
         <HomeLinks />
-        <HomeEducation />
         <HomeExperience />
+        <HomeEducation />
         <HomeProjects />
         <HomeMore />
         <HomeColophon />

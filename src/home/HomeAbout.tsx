@@ -8,7 +8,7 @@ export default function About() {
       </p>
       <p>
         Currently <a href="#experience">Main React Engineer at Viafirma</a>, a
-        cloud-based digital signature and digital identity management suite.
+        cloud-based electronic signature and digital identity management suite.
       </p>
     </div>
   );

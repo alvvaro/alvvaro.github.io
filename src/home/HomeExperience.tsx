@@ -1,3 +1,5 @@
+import LinkWrapper from '@/LinkWrapper';
+
 export default function Experience() {
   return (
     <div>
@@ -17,9 +19,9 @@ export default function Experience() {
               </th>
               <td>
                 <p>
-                  <a href={item.href} className="!text-black">
-                    {item.name}
-                  </a>
+                  <a href={item.href}>{item.company}</a>
+                  {' – '}
+                  <span>{item.sector}</span>
                   {' – '}
                   <span>{item.location}</span>
                 </p>
@@ -29,6 +31,28 @@ export default function Experience() {
                 {item.tags ?
                   <p className="opacity-75">{item.tags.join(' · ')}</p>
                 : null}
+
+                {item.links?.map((link) => (
+                  <LinkWrapper
+                    key={link.title}
+                    href={link.href}
+                    external={link.href.startsWith('https://')}
+                    className="group mt-4 flex flex-row items-start gap-4 hover:!no-underline"
+                  >
+                    <img
+                      src={link.img}
+                      className={'h-[66px] w-[52px] min-w-[52px] rounded-sm object-cover shadow-sm'.concat(
+                        link.animation ? ` animation-${link.animation}` : '',
+                      )}
+                    />
+                    <span className="flex flex-col">
+                      <span className="font-bold group-hover:underline">
+                        {link.title}
+                      </span>
+                      <span className="text-dark-grey">{link.text}</span>
+                    </span>
+                  </LinkWrapper>
+                ))}
               </td>
             </tr>
           ))}
@@ -41,8 +65,10 @@ export default function Experience() {
 const experience = [
   {
     date: '2022 - Now',
-    name: 'Viafirma',
-    location: 'Seville, Spain',
+    company: 'Viafirma',
+    href: 'https://www.viafirma.com/',
+    sector: 'eSignature solutions',
+    location: 'Seville, ES',
     tags: ['React', 'TypeScript', 'Vite', 'Redux', 'SWR', 'MUI'],
     text: (
       <>
@@ -54,7 +80,15 @@ const experience = [
         common library of components.
       </>
     ),
-    href: 'https://www.viafirma.com/',
+    links: [
+      {
+        title: 'Showcase',
+        text: 'Building a new web-based experience for Viafirma',
+        href: './viafirma',
+        img: '/img/viafirma/viafirma-hw.gif',
+        animation: undefined,
+      },
+    ],
   },
   // {
   //   date: '2017 - 2020',
