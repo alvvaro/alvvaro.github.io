@@ -11,5 +11,7 @@ export default function LinkWrapper({
   className?: string;
   children: ReactNode;
 }) {
-  return external ? <a {...props} target="_blank" /> : <Link {...props} />;
+  return external ?
+      <a {...props} target="_blank" />
+    : <Link {...props} state={{ top: true }} />;
 }
