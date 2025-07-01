@@ -10,6 +10,12 @@ export default function About() {
         Currently <a href="#experience">Main React Engineer at Viafirma</a>, a
         cloud-based electronic signature and digital identity management suite.
       </p>
+      <div className="hidden print:block">
+        <p className="mt-4">
+          ¶ Get the live, full version of this document over on{' '}
+          <a href="https://alvvaro.gs/">my website</a>.
+        </p>
+      </div>
     </div>
   );
 }

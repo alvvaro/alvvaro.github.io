@@ -1,6 +1,6 @@
 export default function More() {
   return (
-    <div>
+    <div className="print:hidden">
       <h2 id="misc">Misc.</h2>
       <p className="mt-4">
         While at uni, I codirected the student organization AEDI. There I was
