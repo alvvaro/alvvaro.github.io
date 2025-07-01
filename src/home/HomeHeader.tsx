@@ -6,7 +6,7 @@ export default function Header() {
       <figure className="relative">
         <img
           src="/img/avatar.png"
-          className="w-[96px] rounded-full"
+          className="w-[96px] rounded-full print:w-[82px]"
           alt="My picture!"
           title="Despite everything, it's still me."
         />
@@ -17,7 +17,7 @@ export default function Header() {
       <div>
         <h1 className="text-yellow text-2xl font-bold">álvaro g. serna</h1>
         <p className="">Front-end Developer — He/Él — Seville, ES</p>
-        <div className="mt-2">
+        <div className="mt-2 print:hidden">
           <CurrentlyPlaying />
         </div>
       </div>

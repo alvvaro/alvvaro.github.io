@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, [location]);
 
   return (
-    <div className="mx-4 my-16 flex flex-col items-center *:w-full *:max-w-xl">
+    <div className="mx-4 my-16 flex flex-col items-center *:w-full *:max-w-xl print:my-4 print:*:max-w-2xl">
       {children}
     </div>
   );

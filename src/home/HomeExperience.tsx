@@ -37,7 +37,7 @@ export default function Experience() {
                     key={link.title}
                     href={link.href}
                     external={link.href.startsWith('https://')}
-                    className="group mt-4 flex flex-row items-start gap-4 hover:!no-underline"
+                    className="group mt-4 flex flex-row items-start gap-4 hover:!no-underline print:hidden"
                   >
                     <img
                       src={link.img}

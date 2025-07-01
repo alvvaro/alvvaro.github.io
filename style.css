@@ -13,6 +13,12 @@
   scroll-behavior: smooth;
 }
 
+@media print {
+  :root {
+    font-size: 0.75em;
+  }
+}
+
 @theme {
   --font-sans: 'Inter Variable', system-ui;
 
