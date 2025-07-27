@@ -33,28 +33,30 @@
   --container-xl: 540px;
 }
 
-p {
-  @apply text-dark-grey not-first-of-type:mt-2;
-}
+@layer base {
+  p {
+    @apply text-dark-grey not-first-of-type:mt-2;
+  }
 
-q {
-  @apply text-grey italic;
-}
+  q {
+    @apply text-grey italic;
+  }
 
-a {
-  @apply text-black hover:underline;
-}
+  a {
+    @apply text-black hover:underline;
+  }
 
-em {
-  @apply text-mellow-yellow not-italic;
-}
+  em {
+    @apply text-mellow-yellow not-italic;
+  }
 
-th {
-  @apply text-grey font-normal;
-}
+  th {
+    @apply text-grey font-normal;
+  }
 
-hr {
-  @apply text-grey;
+  hr {
+    @apply text-grey;
+  }
 }
 
 /* ANIMATIONS */

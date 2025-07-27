@@ -18,13 +18,13 @@ export default function Projects() {
                 {item.date}
               </th>
               <td>
-                <p className="!text-black">{item.name}</p>
+                <p className="text-black">{item.name}</p>
                 {item.links.map((link) => (
                   <LinkWrapper
                     key={link.title}
                     href={link.href}
                     external={link.href.startsWith('https://')}
-                    className="group mt-4 flex flex-row items-start gap-4 hover:!no-underline"
+                    className="group mt-4 flex flex-row items-start gap-4 hover:no-underline"
                   >
                     <img
                       src={link.img}

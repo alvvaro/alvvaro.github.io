@@ -29,7 +29,7 @@ export default function Experience() {
                 <p>{item.text}</p>
 
                 {item.tags ?
-                  <p className="opacity-75">{item.tags.join(' · ')}</p>
+                  <p className="text-grey">{item.tags.join(' · ')}</p>
                 : null}
 
                 {item.links?.map((link) => (
@@ -37,7 +37,7 @@ export default function Experience() {
                     key={link.title}
                     href={link.href}
                     external={link.href.startsWith('https://')}
-                    className="group mt-4 flex flex-row items-start gap-4 hover:!no-underline print:hidden"
+                    className="group mt-4 flex flex-row items-start gap-4 hover:no-underline print:hidden"
                   >
                     <img
                       src={link.img}

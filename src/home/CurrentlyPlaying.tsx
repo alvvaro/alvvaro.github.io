@@ -42,7 +42,7 @@ export default function CurrentlyPlaying() {
   return data ?
       <p className="text-sm">
         ♫{' '}
-        <a href={data.link} target="_blank" className="text-inherit!">
+        <a href={data.link} target="_blank" className="text-inherit">
           {data.name}
         </a>{' '}
         ({data.playedFor} today)
