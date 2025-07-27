@@ -67,12 +67,20 @@ function Carrousel({ children }: { children: ReactNode }) {
     return () => div.removeEventListener('scroll', listenerCallback);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--scrollbar-width',
+      window.innerWidth - document.documentElement.clientWidth + 'px',
+    );
+  }, []);
+
   return (
     <div className="flex flex-col gap-2">
       <div
-        className="flex w-dvw flex-row gap-8 overflow-y-auto pt-2 pb-6 *:shrink-0"
+        className="flex flex-row gap-8 overflow-y-auto pt-2 pb-6 *:shrink-0"
         style={{
-          marginLeft: -margin,
+          width: 'calc(100dvw - var(--scrollbar-width, 0px))',
+          marginInlineStart: -margin,
           paddingInline: margin,
         }}
         ref={rowRef}
