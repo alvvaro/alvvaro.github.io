@@ -13,7 +13,7 @@ export default function About() {
       <div className="hidden print:block">
         <p className="mt-4">
           ¶ Get the live, full version of this document over on{' '}
-          <a href="https://alvvaro.gs/">my website</a>.
+          <a href="https://alvaro.gs/">my website</a>.
         </p>
       </div>
     </div>
