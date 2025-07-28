@@ -4,7 +4,7 @@ import LinkWrapper from '@/LinkWrapper';
 
 export default function Experience() {
   return (
-    <div>
+    <section>
       <h2 id="experience">Experience</h2>
       <table className="mt-4 w-full table-fixed">
         <tbody>
@@ -74,7 +74,7 @@ export default function Experience() {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 }
 

@@ -1,6 +1,6 @@
 export default function More() {
   return (
-    <div className="print:hidden">
+    <section className="print:hidden">
       <h2 id="misc">Misc.</h2>
       <p className="mt-4">
         While at uni, I codirected the student organization AEDI. There I was
@@ -11,6 +11,6 @@ export default function More() {
         I have previously worked at a book shop in my hometown; and volunteered
         at Amnesty International Seville as secretary and LGBT+ coordinator.
       </p> */}
-    </div>
+    </section>
   );
 }

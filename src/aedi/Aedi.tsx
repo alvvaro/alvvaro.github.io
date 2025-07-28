@@ -5,56 +5,59 @@ export default function Aedi() {
   return (
     <>
       <HeaderNav h1="Visual work for AEDI Sevilla" />
-      <main className="mt-4 flex flex-col gap-8">
-        <p>
-          During my four years at <a href="https://aedisevilla.es/">AEDI</a> I
-          was tasked with creating graphics for several events and activities.
-          These included print, social media and web design.
-        </p>
+      <main>
+        <article className="mt-4 flex flex-col gap-8">
+          <p>
+            During my four years at <a href="https://aedisevilla.es/">AEDI</a> I
+            was tasked with creating graphics for several events and activities.
+            These included print, social media and web design.
+          </p>
 
-        <Carrousel>
-          {imageCollection01.map((img) => (
-            <Carrousel.Image src={img} key={img} />
-          ))}
-        </Carrousel>
-
-        <p>
-          A year and a half after joining I was chosen to be the design lead of
-          the association, and took the projects of revisiting the communication
-          system and designing a new web experience.
-        </p>
-
-        <Carrousel>
-          {imageCollection02.map((img) =>
-            typeof img === 'string' ?
+          <Carrousel>
+            {imageCollection01.map((img) => (
               <Carrousel.Image src={img} key={img} />
-            : <Carrousel.Image
-                src={img.href}
-                key={img.href}
-                classes={img.classes}
-              />,
-          )}
-        </Carrousel>
+            ))}
+          </Carrousel>
 
-        <p>
-          I also got to be the creative director for the sixth edition of{' '}
-          <a href="https://scd.aedisevilla.es/">Sevilla Ciudad del Diseño</a>{' '}
-          and a consultant for the following two. Our annual event required
-          creating brands that reflected that year’s theme. Everything was done
-          in‑house, from concept to touch points, including brand guidelines.
-        </p>
+          <p>
+            A year and a half after joining I was chosen to be the design lead
+            of the association, and took the projects of revisiting the
+            communication system and designing a new web experience.
+          </p>
 
-        <Carrousel>
-          {imageCollection03.map((img) =>
-            typeof img === 'string' ?
-              <Carrousel.Image src={img} key={img} />
-            : <Carrousel.Image
-                src={img.href}
-                key={img.href}
-                classes={img.classes}
-              />,
-          )}
-        </Carrousel>
+          <Carrousel>
+            {imageCollection02.map((img) =>
+              typeof img === 'string' ?
+                <Carrousel.Image src={img} key={img} />
+              : <Carrousel.Image
+                  src={img.href}
+                  key={img.href}
+                  classes={img.classes}
+                />,
+            )}
+          </Carrousel>
+
+          <p>
+            I also got to be the creative director for the sixth edition of{' '}
+            <a href="https://scd.aedisevilla.es/">Sevilla Ciudad del Diseño</a>{' '}
+            and a consultant for the following two. Our annual event required
+            creating brands that reflected that year’s theme. Everything was
+            done in‑house, from concept to touch points, including brand
+            guidelines.
+          </p>
+
+          <Carrousel>
+            {imageCollection03.map((img) =>
+              typeof img === 'string' ?
+                <Carrousel.Image src={img} key={img} />
+              : <Carrousel.Image
+                  src={img.href}
+                  key={img.href}
+                  classes={img.classes}
+                />,
+            )}
+          </Carrousel>
+        </article>
       </main>
     </>
   );

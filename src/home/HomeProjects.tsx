@@ -2,7 +2,7 @@ import LinkWrapper from '@/LinkWrapper';
 
 export default function Projects() {
   return (
-    <div className="print:hidden">
+    <section className="print:hidden">
       <h2 id="projects">Projects</h2>
       <table className="mt-4 w-full table-fixed">
         <tbody>
@@ -45,7 +45,7 @@ export default function Projects() {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 }
 

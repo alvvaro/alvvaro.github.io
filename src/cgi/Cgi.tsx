@@ -5,26 +5,28 @@ export default function Cgi() {
   return (
     <>
       <HeaderNav h1="Explorations on CGI" />
-      <main className="mt-4 flex flex-col gap-8">
-        <div>
-          <p>
-            <a href="https://instagram.com/seaceau">@seaceau</a> and I decided
-            to recreate the Audio-Technica ATH-M50x headphones digitally and to
-            make some marketing resources from scratch.
-          </p>
-          <p>
-            Solid modelling, lighting setup and rendering were made in
-            Rhinoceros + V-Ray. Bespoke materials were created using Substance
-            Designer, and mesh development and texture placement were done in
-            Blender. Color correction with Lightroom.
-          </p>
-        </div>
+      <main>
+        <article className="mt-4 flex flex-col gap-8">
+          <div>
+            <p>
+              <a href="https://instagram.com/seaceau">@seaceau</a> and I decided
+              to recreate the Audio-Technica ATH-M50x headphones digitally and
+              to make some marketing resources from scratch.
+            </p>
+            <p>
+              Solid modelling, lighting setup and rendering were made in
+              Rhinoceros + V-Ray. Bespoke materials were created using Substance
+              Designer, and mesh development and texture placement were done in
+              Blender. Color correction with Lightroom.
+            </p>
+          </div>
 
-        <Carrousel>
-          {imageCollection.map((img) => (
-            <Carrousel.Image src={img} key={img} classes={['square']} />
-          ))}
-        </Carrousel>
+          <Carrousel>
+            {imageCollection.map((img) => (
+              <Carrousel.Image src={img} key={img} classes={['square']} />
+            ))}
+          </Carrousel>
+        </article>
       </main>
     </>
   );

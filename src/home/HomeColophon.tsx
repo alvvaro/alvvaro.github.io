@@ -1,6 +1,6 @@
 export default function Colophon() {
   return (
-    <div className="print:hidden">
+    <section className="print:hidden">
       <h2 id="colophon">Colophon</h2>
       <p className="mt-4">
         Handcrafted with React and Tailwind. Check out the{' '}
@@ -12,6 +12,6 @@ export default function Colophon() {
       <q className="mt-2 block">
         Designer is that who understands that everything has been designed.
       </q>
-    </div>
+    </section>
   );
 }

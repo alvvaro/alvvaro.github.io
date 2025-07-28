@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 export default function Links() {
   return (
-    <div>
+    <section>
       <h2 id="links">Links</h2>
       <table className="mt-4 w-full table-fixed">
         <tbody>
@@ -34,7 +34,7 @@ export default function Links() {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 }
 
