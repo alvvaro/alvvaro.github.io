@@ -14,7 +14,7 @@ export default function Header() {
           👋
         </figcaption>
       </figure>
-      <div>
+      <div className="w-[80%]">
         <h1 className="text-yellow text-2xl font-bold">álvaro g. serna</h1>
         <p className="">Front-end Developer — He/Él — Seville, ES</p>
         <div className="mt-2 print:hidden">
