@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 export default function Links() {
   return (
     <div>
@@ -7,7 +9,10 @@ export default function Links() {
           {links.map((link) => (
             <tr
               key={link.label}
-              className="border-transparent not-last-of-type:border-b-12"
+              className={classNames(
+                'border-transparent not-last-of-type:border-b-12',
+                link.className,
+              )}
             >
               <th
                 scope="row"
@@ -44,8 +49,8 @@ const links = [
     href: 'tel:+34656383565',
   },
   {
-    label: 'Networking',
-    value: 'LinkedIn',
+    label: 'LinkedIn',
+    value: '@alvvaro',
     href: 'https://www.linkedin.com/in/alvvaro/',
   },
   {
@@ -57,5 +62,6 @@ const links = [
     label: 'Brother',
     value: 'Pablo',
     href: 'https://pablo.gs/',
+    className: 'print:hidden',
   },
 ];
