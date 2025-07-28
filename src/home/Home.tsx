@@ -5,6 +5,7 @@ import HomeExperience from './HomeExperience';
 import HomeHeader from './HomeHeader';
 import HomeLinks from './HomeLinks';
 import HomeMore from './HomeMore';
+import HomePrint from './HomePrint';
 import HomeProjects from './HomeProjects';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <HomeProjects />
         <HomeMore />
         <HomeColophon />
+        <HomePrint />
       </main>
     </>
   );
