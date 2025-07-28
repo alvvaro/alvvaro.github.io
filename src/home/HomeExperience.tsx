@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import LinkWrapper from '@/LinkWrapper';
 
 export default function Experience() {
@@ -18,47 +20,55 @@ export default function Experience() {
                 {item.date}
               </th>
               <td>
-                <p className="text-black">
-                  <span>{item.role}</span>
-                  {' @ '}
+                <p>
                   <a href={item.href}>{item.company}</a>
+                  {' – '}
+                  <span>{item.sector}</span>
+                  {' – '}
+                  <span>{item.location}</span>
                 </p>
 
-                {item.sector || item.location ?
-                  <p>
-                    <span>{item.sector}</span>
-                    {item.sector && item.location ? ' – ' : null}
-                    <span>{item.location}</span>
-                  </p>
+                {item.roles ?
+                  <ul>
+                    {item.roles.map((role) => (
+                      <li key={role.date} className="mt-4">
+                        <p className="text-black">{role.role}</p>
+
+                        <p>{role.text}</p>
+
+                        {role.tags ?
+                          <p className="text-grey">{role.tags.join(' · ')}</p>
+                        : null}
+
+                        {role.links?.map((link) => (
+                          <LinkWrapper
+                            key={link.title}
+                            href={link.href}
+                            external={link.href.startsWith('https://')}
+                            className="group my-4 flex flex-row items-start gap-4 hover:no-underline print:hidden"
+                          >
+                            <img
+                              src={link.img}
+                              className={'h-[66px] w-[52px] min-w-[52px] rounded-sm object-cover shadow-sm'.concat(
+                                link.animation ?
+                                  ` animation-${link.animation}`
+                                : '',
+                              )}
+                            />
+                            <span className="flex flex-col">
+                              <span className="font-bold group-hover:underline">
+                                {link.title}
+                              </span>
+                              <span className="text-dark-grey">
+                                {link.text}
+                              </span>
+                            </span>
+                          </LinkWrapper>
+                        ))}
+                      </li>
+                    ))}
+                  </ul>
                 : null}
-
-                <p>{item.text}</p>
-
-                {item.tags ?
-                  <p className="text-grey">{item.tags.join(' · ')}</p>
-                : null}
-
-                {item.links?.map((link) => (
-                  <LinkWrapper
-                    key={link.title}
-                    href={link.href}
-                    external={link.href.startsWith('https://')}
-                    className="group mt-4 flex flex-row items-start gap-4 hover:no-underline print:hidden"
-                  >
-                    <img
-                      src={link.img}
-                      className={'h-[66px] w-[52px] min-w-[52px] rounded-sm object-cover shadow-sm'.concat(
-                        link.animation ? ` animation-${link.animation}` : '',
-                      )}
-                    />
-                    <span className="flex flex-col">
-                      <span className="font-bold group-hover:underline">
-                        {link.title}
-                      </span>
-                      <span className="text-dark-grey">{link.text}</span>
-                    </span>
-                  </LinkWrapper>
-                ))}
               </td>
             </tr>
           ))}
@@ -70,51 +80,53 @@ export default function Experience() {
 
 const experience = [
   {
-    date: '2024 - Now',
+    date: '2022 - Now',
     company: 'Viafirma',
     role: 'Main React Engineer',
     href: 'https://www.viafirma.com/',
     sector: 'eSignature solutions',
     location: 'Seville, ES',
-    tags: ['React', 'TypeScript', 'Vite', 'Redux', 'SWR', 'MUI'],
-    text: (
-      <>
-        Architecting, developing, and designing several micro-frontends.
-        Accomplished milestones such as migrating legacy apps from CRA to Vite,{' '}
-        <em>adopting TypeScript</em> and harmonizing their design through a
-        common library of components.
-      </>
-    ),
-    links: [
+    roles: [
       {
-        title: 'Showcase',
-        text: 'Building a new web-based experience for Viafirma',
-        href: './viafirma',
-        img: '/img/viafirma/viafirma-hw.gif',
-        animation: undefined,
+        date: '2024 - Now',
+        role: 'Main React Engineer',
+        text: (
+          <>
+            Architecting, developing, and designing several micro-frontends.
+            Accomplished milestones such as migrating legacy apps from CRA to
+            Vite, <em>adopting TypeScript</em> and harmonizing their design
+            through a common library of components.
+          </>
+        ),
+        tags: ['React', 'TypeScript', 'Vite', 'Redux', 'SWR', 'MUI'],
+        links: [
+          {
+            title: 'Showcase',
+            text: 'Building a new web-based experience for Viafirma',
+            href: './viafirma',
+            img: '/img/viafirma/viafirma-hw.gif',
+            animation: undefined,
+          },
+        ],
+      },
+      {
+        date: '2023 - 2024',
+        role: 'UI Developer',
+        text: (
+          <>
+            Worked on theming engines, page layout, semantic markup, component
+            interactions.
+          </>
+        ),
+        tags: ['React', 'Semantic UI', 'MUI'],
+      },
+      {
+        date: '2022 - 2023',
+        role: 'UI/UX Designer',
+        text: <>Proposed a UI design system for the company.</>,
+        tags: ['Figma', 'Zeplin'],
       },
     ],
-  },
-  {
-    date: '2023 - 2024',
-    company: 'Viafirma',
-    role: 'UI Developer',
-    href: 'https://www.viafirma.com/',
-    tags: ['React', 'Semantic UI', 'MUI'],
-    text: (
-      <>
-        Worked on theming engines, page layout, semantic markup, component
-        interactions.
-      </>
-    ),
-  },
-  {
-    date: '2022 - 2023',
-    company: 'Viafirma',
-    role: 'UI/UX Designer',
-    href: 'https://www.viafirma.com/',
-    tags: ['Figma', 'Zeplin'],
-    text: <>Proposed a UI design system for the company.</>,
   },
   // {
   //   date: '2017 - 2020',
