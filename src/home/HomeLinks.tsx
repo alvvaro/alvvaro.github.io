@@ -11,7 +11,8 @@ export default function Links() {
               key={link.label}
               className={classNames(
                 'border-transparent not-last-of-type:border-b-12',
-                link.className,
+                link.hideWeb && 'hidden print:table-row',
+                link.hidePrint && 'print:hidden',
               )}
             >
               <th
@@ -39,6 +40,12 @@ export default function Links() {
 
 const links = [
   {
+    label: 'Website',
+    value: 'alvaro.gs',
+    href: 'https://alvaro.gs/',
+    hideWeb: true,
+  },
+  {
     label: 'Email',
     value: 'hey@alvaro.gs',
     href: 'mailto:hey@alvaro.gs',
@@ -62,6 +69,6 @@ const links = [
     label: 'Brother',
     value: 'Pablo',
     href: 'https://pablo.gs/',
-    className: 'print:hidden',
+    hidePrint: true,
   },
 ];
