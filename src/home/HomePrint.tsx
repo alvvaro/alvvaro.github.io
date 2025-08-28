@@ -1,12 +1,12 @@
 export default function Print() {
   return (
     <section className="print:hidden">
-      <button
-        onClick={window.print}
+      <a
+        href="./cv.pdf"
         className="text-grey hover:cursor-pointer hover:underline"
       >
         Download CV ⤓
-      </button>
+      </a>
     </section>
   );
 }
