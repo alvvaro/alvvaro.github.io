@@ -92,10 +92,10 @@ const experience = [
         role: 'Main React Engineer',
         text: (
           <>
-            Architecting, developing, and designing several micro-frontends.
-            Accomplished milestones such as migrating legacy apps from CRA to
-            Vite, <em>adopting TypeScript</em> and harmonizing their design
-            through a common library of components.
+            Architecting, developing, and designing frontends for
+            micro-services. Accomplished milestones such as migrating legacy
+            apps from CRA to Vite, <em>adopting TypeScript</em> and harmonizing
+            their design through a common library of components.
           </>
         ),
         tags: ['React', 'TypeScript', 'Vite', 'Redux', 'SWR', 'MUI'],

@@ -40,7 +40,7 @@ export default function Viafirma() {
           <p>
             The engineering challenge was to deal with a fragmented stack:
             migrating functionality from backend-centered frameworks and
-            pre-React JS libraries to new micro-frontends,{' '}
+            pre-React JS libraries to new micro-services,{' '}
             <em>major refactors with modern React patterns</em>, implementing
             TypeScript, creating libraries of general-use utilities and
             components, etc.
