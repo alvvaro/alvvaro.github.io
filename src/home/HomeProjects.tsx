@@ -57,7 +57,7 @@ const projects = [
       {
         title: 'Carta',
         text: 'Clean and lightweight interface for RTVE Play, made with React.',
-        href: 'https://carta.valtari.workers.dev',
+        href: './carta',
         img: '/img/index/carta.png',
         animation: 'scroll',
       },
