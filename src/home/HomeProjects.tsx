@@ -57,7 +57,7 @@ const projects = [
       {
         title: 'Carta',
         text: 'Clean and lightweight interface for RTVE Play, made with React.',
-        href: './carta',
+        href: 'https://alvaro.gs/carta',
         img: '/img/index/carta.png',
         animation: 'scroll',
       },
